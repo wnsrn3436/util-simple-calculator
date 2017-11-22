@@ -1,0 +1,8 @@
+<resources>
+    <string name="appName">SimpleCalculator</string>
+    <string name="calInitValue">0</string>
+    <string name="duplicateOperator">\'=\' 버튼을 눌러 연산해주세요!</string>
+    <string name="noOperator">먼저 연산자 버튼을 눌러주세요!</string>
+    <string name="divideByZero">0으로 나눌 수 없습니다!</string>
+    <string name="noOperand">피연산자를 입력해주세요!</string>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gdlCurrentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <com.jungu.simplecalculator.EdtCalculator
+        android:id="@+id/edtCalculator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:inputType="none"
+        android:hint=""
+        android:text="@string/calInitValue"
+        android:textSize="50sp"
+        android:maxLines="3"
+        android:gravity="right|bottom"
+        android:cursorVisible="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gdlCurrentNumber" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber7"
+        android:text="7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber8"
+        app:layout_constraintTop_toBottomOf="@+id/gdlCurrentNumber"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber4" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber8"
+        android:text="8"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber7"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber9"
+        app:layout_constraintTop_toBottomOf="@+id/gdlCurrentNumber"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber5" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber9"
+        android:text="9"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber8"
+        app:layout_constraintRight_toLeftOf="@+id/btnOperatorPlus"
+        app:layout_constraintTop_toBottomOf="@+id/gdlCurrentNumber"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber6" />
+
+    <com.jungu.simplecalculator.BtnOperator
+        style="@style/calButtonTheme"
+        android:id="@+id/btnOperatorPlus"
+        android:background="#dfb657"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gdlCurrentNumber"
+        app:layout_constraintBottom_toTopOf="@+id/btnOperatorSubtract" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber4"
+        android:text="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber5"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber7"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber1" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber5"
+        android:text="5"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber4"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber6"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber8"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber2" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber6"
+        android:text="6"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber5"
+        app:layout_constraintRight_toLeftOf="@+id/btnOperatorSubtract"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber9"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber3" />
+
+    <com.jungu.simplecalculator.BtnOperator
+        style="@style/calButtonTheme"
+        android:id="@+id/btnOperatorSubtract"
+        android:background="#dfb657"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOperatorPlus"
+        app:layout_constraintBottom_toTopOf="@+id/btnOperatorMultiply" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber1"
+        android:text="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber4"
+        app:layout_constraintBottom_toTopOf="@+id/btnNumber0" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber2"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber1"
+        app:layout_constraintRight_toLeftOf="@+id/btnNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber5"
+        app:layout_constraintBottom_toTopOf="@+id/btnUtilAC" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber3"
+        android:text="3"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber2"
+        app:layout_constraintRight_toLeftOf="@+id/btnOperatorMultiply"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber6"
+        app:layout_constraintBottom_toTopOf="@+id/btnUtilC" />
+
+    <com.jungu.simplecalculator.BtnOperator
+        style="@style/calButtonTheme"
+        android:id="@+id/btnOperatorMultiply"
+        android:background="#dfb657"
+        android:text="*"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOperatorSubtract"
+        app:layout_constraintBottom_toTopOf="@+id/btnOperatorDivision" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnNumber0"
+        android:text="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnUtilAC"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber1"
+        app:layout_constraintBottom_toTopOf="@+id/gdlResult" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnUtilAC"
+        android:background="#bbc192"
+        android:text="AC"
+        app:layout_constraintLeft_toRightOf="@+id/btnNumber0"
+        app:layout_constraintRight_toLeftOf="@+id/btnUtilC"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber2"
+        app:layout_constraintBottom_toTopOf="@+id/gdlResult" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnUtilC"
+        android:background="#bbc192"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@+id/btnUtilAC"
+        app:layout_constraintRight_toLeftOf="@+id/btnOperatorDivision"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber3"
+        app:layout_constraintBottom_toTopOf="@+id/gdlResult" />
+
+    <com.jungu.simplecalculator.BtnOperator
+        style="@style/calButtonTheme"
+        android:id="@+id/btnOperatorDivision"
+        android:background="#dfb657"
+        android:text="/"
+        app:layout_constraintLeft_toRightOf="@+id/btnUtilC"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOperatorMultiply"
+        app:layout_constraintBottom_toTopOf="@+id/gdlResult" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gdlResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <Button
+        style="@style/calButtonTheme"
+        android:id="@+id/btnUtilResult"
+        android:background="#c4a76e"
+        android:text="="
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gdlResult"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
